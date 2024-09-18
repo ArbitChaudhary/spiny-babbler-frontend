@@ -1,0 +1,133 @@
+@import '../../styles/constants.scss';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-sm) {
+    // max-width: $breakpoint-sm;
+    margin: 0 auto;
+  }
+}
+
+.skill {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  padding: $sp-1;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 2px;
+  }
+
+  h1 {
+    font-size: 16px;
+    padding: $sp-2;
+    border-bottom: 1px solid gray;
+    line-height: 1;
+
+    @media (min-width: $breakpoint-sm) {
+      padding: $sp-2 $sp-3;
+      border-bottom: 1px solid gray;
+    }
+    p {
+      font-size: 13px;
+      color: gray;
+      font-weight: normal;
+    }
+  }
+  .addSkillForm {
+    display: flex;
+    flex-direction: column;
+    // margin-top: $sp-1;
+    padding: $sp-2;
+    gap: $sp-2;
+    @media (min-width: $breakpoint-sm) {
+      padding: $sp-3;
+      gap: $sp-3;
+    }
+
+    .formInputs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      @media (min-width: $breakpoint-sm) {
+        gap: $sp-3;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: $sp-1;
+
+        span {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        select {
+          border-radius: $border-radius;
+          border: $input-border;
+          padding: 0.4rem;
+
+          @media (min-width: $breakpoint-sm) {
+            padding: 0.6rem;
+          }
+
+          &:focus {
+            outline: $input-focus;
+          }
+        }
+
+        textarea {
+          padding: $sp-2;
+          border-radius: $border-radius;
+          //   box-shadow: $input-shadow;
+          border: $input-border;
+          height: 100px;
+
+          &:focus {
+            outline: $input-focus;
+          }
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: lightgray;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: gray;
+          }
+        }
+        .image {
+          border: 1px solid lightgray;
+          padding: 0.3rem;
+          width: fit-content;
+        }
+      }
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        border: none;
+        padding: $sp-1;
+        background-color: #d3d3d370;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #d3d3d3;
+        }
+        @media (min-width: $breakpoint-sm) {
+          padding: $sp-2 20px;
+          background-color: #d3d3d370;
+          width: 100px;
+        }
+      }
+    }
+  }
+}

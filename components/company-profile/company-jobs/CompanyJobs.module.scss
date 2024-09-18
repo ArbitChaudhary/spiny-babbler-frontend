@@ -1,0 +1,76 @@
+@import 'styles/constants.scss';
+
+.jobs {
+  margin-top: $sp-3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .job {
+    border-radius: $border-radius;
+    background-color: $primary-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 6px 1px #00000020;
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      gap: $sp-1;
+      // align-items: center;
+      justify-content: space-between;
+      padding: $sp-3;
+
+      .detail {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .company {
+          font-size: 15px;
+          color: #000092;
+        }
+        .address {
+          font-size: 13px;
+          color: gray;
+          display: flex;
+          flex-direction: row;
+          gap: 0.3rem;
+          align-items: center;
+
+          svg {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .applicants {
+      text-align: center;
+      padding: $sp-2 $sp-1;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      color: gray;
+      font-size: 15px;
+    }
+    .posted {
+      display: flex;
+      gap: $sp-1;
+      padding: $sp-2;
+      align-items: center;
+      justify-content: flex-start;
+      color: gray;
+      font-size: 15px;
+
+      svg {
+        font-size: 15px;
+      }
+    }
+  }
+}

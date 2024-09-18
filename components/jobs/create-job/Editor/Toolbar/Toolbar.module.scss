@@ -1,0 +1,16 @@
+.toolbarGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 1fr 1fr;
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.6rem;
+
+  button {
+    margin-right: 8px;
+    font-size: 1rem;
+    padding: 5px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+  }
+}

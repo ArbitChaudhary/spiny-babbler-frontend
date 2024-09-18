@@ -1,0 +1,20 @@
+@import 'styles/constants.scss';
+
+.container {
+
+  .tabs {
+    border-bottom: 1px solid grey;
+  }
+
+  .tab {
+    text-transform: capitalize;
+    padding: 0;
+  }
+
+  .content {
+    padding: .7rem;
+  }
+
+}
+
+

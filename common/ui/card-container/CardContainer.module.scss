@@ -1,0 +1,28 @@
+@import '../../../styles/constants.scss';
+
+.container {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid grey;
+  gap: 0.2rem;
+  background-color: white;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 1rem;
+  }
+
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+.content {
+  // padding: 1rem;
+  font-size: 0.9rem;
+}

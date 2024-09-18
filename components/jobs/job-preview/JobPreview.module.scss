@@ -1,0 +1,301 @@
+@import 'styles/constants.scss';
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $sp-4;
+  margin: 0 auto;
+  box-shadow: 2px 2px 7px 2px #00000020;
+}
+
+.jobBody {
+  display: flex;
+  flex-direction: column;
+  //   gap: $sp-1;
+}
+
+.jobTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .jobTitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .jRight {
+    display: flex;
+    gap: $sp-3;
+    align-items: center;
+
+    svg {
+      font-size: 20px;
+      color: gray;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.jobLocations {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 15px;
+
+  .posted {
+    color: gray;
+  }
+  .applicants {
+    color: seagreen;
+  }
+}
+
+.jobplaceType {
+  margin-top: $sp-3;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+
+  svg {
+    font-size: 20px;
+    color: gray;
+  }
+  .placeType {
+    display: flex;
+    align-items: center;
+    gap: $sp-1;
+    font-size: 14px;
+
+    span {
+      padding: 0.1rem 0.6rem;
+      background-color: lightgray;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.jobOwner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: $sp-3;
+  gap: $sp-2;
+
+  .avatar {
+    width: 2rem;
+    height: 2rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .forOwner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+
+    .ownerName {
+      font-size: 15px;
+    }
+    span {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+}
+.reqSkills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $sp-2;
+  margin-top: $sp-3;
+
+  svg {
+    color: gray;
+    font-size: 20px;
+  }
+
+  .skills {
+    display: flex;
+    gap: $sp-1;
+
+    .skill {
+      font-size: 14px;
+    }
+    span {
+      font-size: 14px;
+      color: gray;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.applyButtons {
+  margin-top: $sp-3;
+  display: flex;
+  flex-direction: row;
+  gap: $sp-3;
+  align-items: center;
+}
+
+.requiredSkills {
+  display: flex;
+  flex-direction: row;
+  gap: $sp-2;
+  margin-top: $sp-3;
+  span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .requiredSkillList {
+    display: flex;
+    flex-direction: row;
+    gap: $sp-1;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+.closingTime {
+  margin-top: $sp-3;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  svg {
+    font-size: 20px;
+    color: gray;
+  }
+  span {
+    font-size: 14px;
+    color: gray;
+  }
+}
+
+.aboutJob {
+  margin-top: $sp-3;
+  .aboutJobHead {
+    font-size: 16px;
+    margin-top: $sp-3;
+    font-weight: 600;
+  }
+  .jobDesc {
+    font-size: 15px;
+  }
+}
+
+.jobResponsibilities {
+  margin-top: $sp-3;
+  .jobResponsibilityHead {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .jobResponsibilityList {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: $sp-3;
+
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .contextList {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        margin-left: 1rem;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.hiringBox {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: $sp-1;
+  border: 1px solid lightgray;
+  border-radius: $border-radius;
+
+  .hiringHead {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .hiringProfile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $sp-2;
+
+    .pLeft {
+      display: flex;
+      gap: $sp-3;
+
+      .avatar {
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+      }
+      .aboutProfile {
+        display: flex;
+        flex-direction: column;
+        gap: $sp-1;
+
+        .uName {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: $sp-1;
+          line-height: 1;
+          font-size: 14px;
+
+          :first-child {
+            padding-right: $sp-1;
+            border-right: 2px solid gray;
+          }
+        }
+        .jobPoster {
+          font-size: 13px;
+          color: gray;
+        }
+      }
+    }
+  }
+  .about {
+    margin-top: 1rem;
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .desc {
+      font-size: 14px;
+    }
+  }
+}

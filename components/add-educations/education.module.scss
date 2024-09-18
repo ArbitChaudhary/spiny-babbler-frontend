@@ -1,0 +1,94 @@
+@import '../../styles/constants.scss';
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    // max-width: $breakpoint-sm;
+  }
+}
+.education {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $sp-2;
+  // box-shadow: 0 2px 5px 1px #00000020;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 2px;
+  }
+
+  h1 {
+    font-size: 16px;
+    padding: $sp-2;
+    border-bottom: 1px solid gray;
+    line-height: 1;
+
+    @media (min-width: $breakpoint-sm) {
+      // border-bottom: 2px solid lightgray;
+      padding: $sp-2;
+    }
+
+    p {
+      font-weight: normal;
+      font-size: 13px;
+      color: gray;
+    }
+  }
+}
+
+.addEducationForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: $sp-1;
+  padding: $sp-2;
+  gap: $sp-2;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: $sp-3;
+    gap: $sp-3;
+    margin-top: $sp-1;
+  }
+
+  .formInputs {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-2;
+
+    @media (min-width: $breakpoint-sm) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $sp-3;
+    }
+
+    .flexForm {
+      display: flex;
+      flex-direction: column;
+      gap: $sp-1;
+
+      .title {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      input {
+        padding: 1rem;
+        // border: $input-border;
+        border-radius: $border-radius;
+
+        &:focus {
+          // outline: $input-focus;
+        }
+      }
+      .image {
+        border: 1px solid lightgray;
+        width: fit-content;
+        padding: 0.4rem;
+      }
+    }
+  }
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

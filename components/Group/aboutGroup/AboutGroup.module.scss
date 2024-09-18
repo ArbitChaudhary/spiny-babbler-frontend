@@ -1,0 +1,19 @@
+@import 'styles/constants.scss';
+
+.container {
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  border-radius: $border-radius;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: bold;
+  padding: $sp-2 $sp-3;
+  border-bottom: 1px solid gray;
+}
+
+.text {
+  font-size: 15px;
+  padding: $sp-3;
+}

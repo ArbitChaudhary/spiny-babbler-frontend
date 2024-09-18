@@ -1,0 +1,13 @@
+@import 'styles/constants.scss';
+
+.container {
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 100%;
+    max-width: $breakpoint-lg;
+  }
+}

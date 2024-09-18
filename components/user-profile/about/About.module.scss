@@ -1,0 +1,163 @@
+@import 'styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-md;
+  gap: $sp-3;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: 2fr 4.5fr;
+    display: grid;
+  }
+}
+
+.left {
+  .moreFeature {
+    position: relative;
+    box-shadow: 0 2px 4px 1px #00000020;
+    border-radius: $border-radius;
+    background-color: $primary-color;
+    gap: 0.5rem;
+    font-size: 15px;
+    display: flex;
+    gap: $sp-1;
+    overflow-x: scroll;
+
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      overflow-x: hidden;
+      padding: $sp-3;
+    }
+
+    .back {
+      padding: 0.4rem 1rem;
+      background-color: #d3d3d3;
+      cursor: pointer;
+      border-radius: $border-radius;
+    }
+
+    .normal {
+      padding: 0.3rem 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d3d3d370;
+      }
+    }
+  }
+}
+
+.addFeatures {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  span {
+    padding: $sp-1;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: $sp-3;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #d3d3d354;
+      cursor: pointer;
+    }
+  }
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+
+.About {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px 1px #00000020;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid lightslategray;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+
+.para {
+  padding: $sp-3;
+  font-size: 15px;
+  color: slategray;
+}
+
+.experiences {
+  margin-top: $sp-1;
+  padding: $sp-3;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+
+  .experience {
+    display: flex;
+    justify-content: space-between;
+    gap: $sp-3;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: $sp-1;
+
+    .detail {
+      display: flex;
+      flex-direction: row;
+      gap: $sp-1;
+
+      .allContexts {
+        display: flex;
+        flex-direction: column;
+
+        .context {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .company {
+          font-weight: bold;
+          color: blue;
+          font-size: 15px;
+        }
+        .duration {
+          color: gray;
+          font-size: 15px;
+        }
+        .desc {
+          color: gray;
+          font-size: 14px;
+        }
+      }
+    }
+    .delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 1.2rem;
+        color: slategray;
+        cursor: pointer;
+      }
+    }
+  }
+}

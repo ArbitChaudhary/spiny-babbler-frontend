@@ -1,0 +1,72 @@
+@import 'styles/constants.scss';
+
+.container {
+  background-color: wheat;
+  padding: $sp-3;
+}
+
+.RegisterContent {
+  max-width: 300px;
+  margin: 0 auto;
+
+  .allContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.welcome {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.text {
+  font-size: 14px;
+  color: #767676;
+  text-align: center;
+}
+.logo {
+  position: relative;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+
+  .formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    span {
+      font-size: 15px;
+    }
+    input {
+      padding: 0.6rem 0.6rem;
+      border: none;
+      border-radius: $border-radius;
+      box-shadow: 0 0 4px 0 #00000020;
+    }
+    textarea {
+      padding: 0.6rem 0.6rem;
+      border: none;
+      border-radius: $border-radius;
+      box-shadow: 0 0 4px 0 #00000020;
+      height: 100px;
+    }
+  }
+  .button {
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    // background-color: #d3d3d370;
+    border: none;
+    border-radius: $border-radius;
+
+    &:hover {
+      cursor: pointer;
+      background-color: gray;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import 'styles/constants.scss';
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: #f1f4fb;
+  }
+
+  .image {
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .content {
+    font-size: 0.9rem;
+
+    .title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .location {
+      color: grey;
+    }
+
+    .stats span {
+      color: grey;
+      font-size: 0.7rem;
+      margin-left: 0.2rem;
+    }
+  }
+}

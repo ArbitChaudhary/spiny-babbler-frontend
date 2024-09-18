@@ -1,0 +1,104 @@
+@import 'styles/constants.scss';
+
+.post {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+  padding: 1rem;
+  font-size: 0.9rem;
+
+  .top {
+    padding: 0.7rem 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .userDetail {
+    .name {
+      font-weight: bold;
+    }
+
+    .postTime {
+      color: grey;
+    }
+  }
+
+  .body {
+    .images {
+      background-color: black;
+      border-radius: $border-radius;
+      overflow: hidden;
+      margin-top: 1rem;
+      position: relative;
+      width: 100%;
+      min-height: 200px;
+      height: 60vh;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .postStats {
+    display: flex;
+    gap: 0.7rem;
+    font-size: 0.7rem;
+    padding: 0.7rem 0;
+
+    .flex {
+      flex: 1;
+    }
+
+    .comment,
+    .like {
+      color: blue;
+    }
+
+    .share {
+      color: grey;
+    }
+  }
+
+  .commentList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0.7rem 0;
+  }
+
+  .addComment {
+    border: 1px solid grey;
+    border-radius: $border-radius;
+    margin-top: 0.5rem;
+    display: flex;
+    padding: 0.5rem 0.7rem;
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background-color: inherit;
+    }
+
+    .action {
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+
+      &:hover {
+        color: blue;
+      }
+    }
+
+    svg {
+      font-size: 1.2rem;
+    }
+  }
+}

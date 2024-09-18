@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 0.5rem;
+  background-color: inherit;
+  border: none;
+
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+.menuItem {
+  display: flex;
+  gap: .7rem;
+  font-size: .9rem;
+  svg {
+    font-size: 1.4rem;
+  }
+}

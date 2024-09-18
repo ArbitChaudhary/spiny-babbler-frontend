@@ -1,0 +1,7 @@
+@import 'styles/constants.scss';
+
+.container {
+  position: relative;
+  max-width: $breakpoint-lg;
+  margin: 0 auto;
+}

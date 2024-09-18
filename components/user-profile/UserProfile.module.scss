@@ -1,0 +1,270 @@
+@import 'styles/constants.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  // justify-content: center;
+  gap: $sp-3;
+  width: 100%;
+}
+
+.userContents {
+  max-width: $breakpoint-md;
+  width: 100%;
+  margin: 0 auto;
+}
+.box {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+  overflow: hidden;
+
+  .profile {
+    padding: $sp-3 $sp-4 0.4rem $sp-4;
+    background: linear-gradient(120deg, seagreen, red);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    height: 190px;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      max-width: 130px;
+      width: 100%;
+      align-items: center;
+
+      .avatar {
+        width: 126px;
+        height: 126px;
+      }
+
+      .name {
+        font-size: 17px;
+        font-weight: bold;
+        // color: white;
+      }
+    }
+  }
+  .bottom {
+    padding: $sp-2 $sp-3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.3rem;
+    .left {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      //   gap: 0.rem;
+
+      .education {
+        display: flex;
+        flex-direction: row;
+        gap: $sp-2;
+        span {
+          font-size: 15px;
+        }
+
+        svg {
+          font-size: 18px;
+        }
+      }
+      .connection {
+        display: flex;
+        flex-direction: row;
+        gap: $sp-2;
+
+        span {
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        svg {
+          font-size: 17px;
+        }
+      }
+      .socialProfile {
+        margin-top: $sp-1;
+        display: flex;
+        flex-direction: row;
+        gap: $sp-1;
+
+        svg {
+          padding: 0.3rem;
+          font-size: 30px;
+          border-radius: 50%;
+          background-color: #d3d3d3;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .buttons {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: $sp-2;
+
+      button {
+        // font-size: 14px;
+        border: none;
+        padding: 0.4rem;
+        background-color: #d3d3d370;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #d3d3d3;
+        }
+      }
+    }
+  }
+}
+
+.bar {
+  margin-top: $sp-3;
+  max-width: 500px;
+  width: 100%;
+  // margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // border: 1px solid lightgray;
+  border-radius: 50px;
+  overflow: hidden;
+  font-size: 15px;
+  background-color: $primary-color;
+  box-shadow: 0 2px 4px 1px #00000020;
+
+  .back {
+    padding: $sp-1;
+    text-align: center;
+    background-color: #d3d3d3;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .normal {
+    text-align: center;
+    padding: $sp-1;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d3d3d370;
+    }
+  }
+}
+
+.content {
+  margin-top: $sp-3;
+}
+
+.right {
+  max-width: 21rem;
+  width: 100%;
+  display: none;
+}
+
+.others {
+  width: 100%;
+
+  border-radius: $border-radius;
+  max-width: 21rem;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+
+.rightTop {
+  background-color: $primary-color;
+  padding: $sp-3;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+  font-size: 30px;
+  font-weight: bold;
+  height: 300px;
+}
+
+.rightViewers {
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  border-radius: $border-radius;
+
+  h1 {
+    padding: $sp-2 $sp-3;
+    font-size: 17px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.viewers {
+  margin-top: $sp-1;
+  display: flex;
+  flex-direction: column;
+
+  .viewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $sp-3;
+    padding: $sp-1 $sp-3;
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: $sp-3;
+
+      .userInfo {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        :last-child {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+    .connect {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0.6rem;
+      background-color: #d3d3d370;
+      color: seagreen;
+      font-size: 14px;
+      border-radius: 2px;
+      position: relative;
+      gap: 0.1rem;
+
+      svg {
+        font-size: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}
+.seeAll {
+  margin: $sp-3;
+  padding: 0.3rem 0;
+  text-align: center;
+  background-color: #d3d3d370;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+  }
+}

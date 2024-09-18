@@ -1,0 +1,14 @@
+@import 'styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  overflow: hidden;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-lg;
+    gap: 1rem;
+  }
+}

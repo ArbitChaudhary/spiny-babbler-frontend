@@ -1,0 +1,56 @@
+@import 'styles/constants.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: $border-radius;
+  border: 1px solid #f1f4fb;
+
+  .image {
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .content {
+    flex-grow: 1;
+    font-size: 0.9rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: bold;
+
+      .text {
+        flex-grow: 1;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .location {
+      color: grey;
+    }
+
+    .stats span {
+      color: grey;
+      font-size: 0.7rem;
+      margin-left: 0.2rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

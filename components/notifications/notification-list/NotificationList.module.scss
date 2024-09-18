@@ -1,0 +1,12 @@
+
+.container {
+  & > div {
+    border-bottom: 1px solid grey;
+  }
+
+  & > div:last-child {
+    border-bottom: none;
+  }
+}
+
+

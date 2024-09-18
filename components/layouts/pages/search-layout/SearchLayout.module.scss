@@ -1,0 +1,6 @@
+@import 'styles/constants.scss';
+
+.container {
+    overflow: hidden;
+    max-width: $breakpoint-lg;
+}

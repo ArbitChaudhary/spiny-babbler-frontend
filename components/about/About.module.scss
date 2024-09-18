@@ -1,0 +1,182 @@
+@import '../../styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-md;
+  gap: $sp-3;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.left {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 18rem;
+    width: 100%;
+  }
+  // max-width: 18rem;
+
+  .list {
+    background-color: $primary-color;
+  }
+  .titles {
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 5px 1px #00000020;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    font-size: 15px;
+    overflow-x: scroll;
+
+    @media (min-width: $breakpoint-md) {
+      padding: $sp-3;
+      flex-direction: column;
+      overflow: hidden;
+      // width: fit-content;
+    }
+  }
+}
+.back {
+  padding: 0.6rem 1rem;
+  background-color: #d3d3d3;
+  // border-radius: $border-radius;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.normal {
+  padding: 0.3rem 1rem;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #d3d3d370;
+  }
+}
+.addFeatures {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  span {
+    padding: $sp-1;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: $sp-3;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #d3d3d354;
+      cursor: pointer;
+    }
+  }
+}
+.right {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-md) {
+  }
+}
+
+.About {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px 1px #00000020;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid lightslategray;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+
+.para {
+  padding: $sp-3;
+  font-size: 15px;
+  color: slategray;
+}
+
+.experiences {
+  margin-top: $sp-1;
+  padding: $sp-3;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+
+  .experience {
+    display: flex;
+    justify-content: space-between;
+    gap: $sp-3;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: $sp-1;
+
+    .detail {
+      display: flex;
+      flex-direction: row;
+      gap: $sp-1;
+
+      .allContexts {
+        display: flex;
+        flex-direction: column;
+
+        .context {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .company {
+          font-weight: bold;
+          color: blue;
+          font-size: 15px;
+        }
+        .duration {
+          color: gray;
+          font-size: 15px;
+        }
+        .desc {
+          color: gray;
+          font-size: 14px;
+        }
+      }
+    }
+    .delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 1.2rem;
+        color: slategray;
+        cursor: pointer;
+      }
+    }
+  }
+}

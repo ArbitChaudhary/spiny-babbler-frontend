@@ -1,0 +1,154 @@
+@import 'styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-lg;
+  margin: 0 auto;
+  position: relative;
+}
+
+.trending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 2px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background-color: #8d0000;
+      bottom: -0.5rem;
+      left: -1.3rem;
+    }
+  }
+}
+
+.trendings {
+  max-width: $breakpoint-md;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: $primary-color;
+  margin-top: 2rem;
+}
+
+.blogs {
+  margin-top: 5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .blog {
+    position: relative;
+    box-shadow: 0 1px 3px 2px #00000020;
+    border-radius: $border-radius;
+    overflow: hidden;
+    background-color: $primary-color;
+    transition: all ease-in-out 300ms;
+    height: fit-content;
+
+    &:hover {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .image {
+      position: relative;
+      width: 100%;
+      height: 150px;
+    }
+
+    .details {
+      // position: relative;
+      line-height: 1;
+      padding: $sp-2;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: $sp-3;
+
+        :nth-child(1) {
+          font-size: 14px;
+          font-weight: 500;
+        }
+        :nth-child(2) {
+          font-size: 13px;
+          color: gray;
+        }
+      }
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .desc {
+        color: gray;
+        font-size: 14px;
+      }
+      .bottom {
+        // position: relative;
+        // margin-top: 10px;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: first baseline;
+
+        .author {
+          margin-top: 10px;
+          display: flex;
+          gap: $sp-2;
+          align-items: center;
+
+          .avatar {
+            // position: relative;
+            width: 30px;
+            height: 30px;
+          }
+
+          .writer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.3rem;
+            .name {
+              // font-weight: bold;
+              font-size: 15px;
+            }
+            .post {
+              color: gray;
+              font-size: 14px;
+            }
+          }
+        }
+        .ratings {
+          display: flex;
+          flex-direction: row;
+          // gap: 0.2rem;
+          svg {
+            font-size: 16px;
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}

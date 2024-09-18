@@ -1,0 +1,56 @@
+@import 'styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-md;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+
+.About {
+  width: 100%;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px 1px #00000020;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid lightslategray;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+
+.para {
+  padding: $sp-3;
+  font-size: 14px;
+  // color: ;
+}
+
+.basicInfo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  padding: 0 $sp-4;
+
+  .info {
+    display: flex;
+    gap: $sp-3;
+
+    :first-child {
+      flex: 1.2;
+      font-size: 15px;
+    }
+    :last-child {
+      flex: 3;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'styles/constants.scss';
+
+.container {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 300px;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 0.5rem 0.7rem;
+    font-size: .9rem;
+  }
+
+  button {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: .5rem;
+
+    border-left: 1px solid grey;
+
+      &:hover {
+        background-color:antiquewhite;
+      }
+
+    svg {
+      font-size: 1.4rem;
+      color: grey;
+
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import 'styles/constants.scss';
+
+.connections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // padding: $sp-3;
+  gap: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  box-shadow: 0 0 8px 2px #00000020;
+  padding: $sp-2;
+  border-radius: $border-radius;
+  gap: $sp-2;
+
+  .image {
+    height: 80px;
+    width: 80px;
+
+    .common {
+      height: 20px;
+      width: 20px;
+      // font-size: 12px;
+    }
+  }
+  .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: $sp-1;
+    p {
+      font-size: 13px;
+      color: gray;
+      margin-top: 0.2rem;
+    }
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .conNumber {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $sp-3;
+
+    span {
+      font-size: 13px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    svg {
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+}

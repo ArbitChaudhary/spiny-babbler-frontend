@@ -1,0 +1,40 @@
+@import 'styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: $sp-3;
+}
+
+.left {
+  width: 100%;
+  max-width: 17rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+
+.right {
+  position: relative;
+  background-color: $primary-color;
+  width: 100%;
+  max-width: 19rem;
+  height: fit-content;
+}
+
+.top {
+  height: 400px;
+  text-align: center;
+  padding: 2rem;
+  font-size: 30px;
+  font-weight: bold;
+}

@@ -1,0 +1,23 @@
+@import 'styles/constants.scss';
+
+.suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  .ImageAndName {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .image {
+      position: relative;
+      width: 55px;
+      height: 55px;
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+    .name {
+      font: bold;
+    }
+  }
+}

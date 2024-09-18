@@ -1,0 +1,27 @@
+  .comment {
+    display: flex;
+    gap: 0.7rem;
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .time {
+        color: grey;
+        font-size: 0.7rem;
+      }
+    }
+
+    .content {
+      font-size: 0.7rem;
+    }
+  }

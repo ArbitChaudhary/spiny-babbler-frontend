@@ -1,0 +1,9 @@
+@import 'styles/constants.scss';
+
+.main {
+  margin: calc($navbar-height + $sp-3) 0 $sp-3 0;
+
+  @media (min-width: $breakpoint-sm) {
+    margin: calc($navbar-height + $sp-3) $sp-3 $sp-3 $sp-3;
+  }
+}

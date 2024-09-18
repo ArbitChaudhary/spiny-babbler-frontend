@@ -1,0 +1,24 @@
+@import 'styles/constants.scss';
+
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    padding: 1rem;
+    font-size: .9rem;
+    border-radius: $border-radius;
+    align-items: center;
+    gap: .7rem;
+    font-weight: bold;
+
+
+    .image {
+        position: relative;
+        border-radius: $border-radius;
+        overflow: hidden;
+        width: 38px;
+        height: 38px;
+    }
+
+}

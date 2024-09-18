@@ -1,0 +1,212 @@
+@import 'styles/constants.scss';
+
+.container {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-lg;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+.left {
+  // position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+.mid {
+  width: 100%;
+  @media (min-width: $breakpoint-sm) {
+    max-width: 500px;
+    min-width: 400px;
+  }
+}
+
+.userInfoCard {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $sp-2;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    // max-width: 260px;
+    width: 100%;
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+
+    .avatar {
+      border: 3px solid white;
+    }
+  }
+
+  .content {
+    margin-top: $sp-2;
+    padding: 0 $sp-1;
+    display: flex;
+    flex-direction: column;
+    gap: $sp-1;
+
+    .welcome {
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 2px solid white;
+      padding-bottom: $sp-1;
+    }
+
+    .connections {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      gap: $sp-1;
+    }
+  }
+}
+
+.right {
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 20rem;
+    width: 100%;
+    display: inline;
+  }
+
+  .peopleSuggestions {
+    position: relative;
+    height: fit-content;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 5px 1px #00000020;
+    h1 {
+      padding: $sp-2 $sp-3;
+      font-weight: bold;
+      font-size: 17px;
+      border-bottom: 1px solid gray;
+    }
+  }
+  .jobs {
+    background-color: $primary-color;
+    border-radius: 4px;
+    margin-top: $sp-3;
+    box-shadow: 0 1px 5px 1px #00000020;
+    position: relative;
+    h1 {
+      padding: $sp-2 $sp-3;
+      font-weight: bold;
+      font-size: 17px;
+      border-bottom: 1px solid gray;
+    }
+    .jobList {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      .job {
+        position: relative;
+        background: $primary-color;
+        padding: $sp-2 $sp-3 $sp-1 $sp-3;
+        border-bottom: 1px solid #d3d3d3;
+        .details {
+          display: flex;
+          gap: $sp-3;
+          .image {
+            position: relative;
+            height: 60px;
+            width: 60px;
+            overflow: hidden;
+          }
+          .detail {
+            display: flex;
+            flex-direction: column;
+            .name {
+              font-size: 15px;
+              font-weight: bold;
+            }
+            .cName {
+              // color: #556cd6;
+              font-size: 14px;
+              // font-weight: bold;
+            }
+            .address {
+              color: grey;
+              font-size: 13px;
+            }
+
+            .timeAndApp {
+              margin-top: 0.3rem;
+              display: flex;
+              align-items: center;
+              gap: $sp-3;
+              font-size: 12px;
+              color: gray;
+
+              .time {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.autoSugg {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+  padding: $sp-3;
+}
+
+.homePhoto {
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  border-radius: $border-radius;
+
+  h1 {
+    font-size: 17px;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid gray;
+  }
+  .homePhotoImages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    padding: 0.3rem;
+
+    .homePhotoImage {
+      height: 5rem;
+      width: 100%;
+      position: relative;
+    }
+  }
+}
+
+.homeGroup {
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: $border-radius;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #00000010;
+  }
+}

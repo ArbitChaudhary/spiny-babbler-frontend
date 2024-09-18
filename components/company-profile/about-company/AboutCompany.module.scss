@@ -1,0 +1,48 @@
+@import 'styles/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+  margin-top: $sp-3;
+}
+
+.box {
+  box-shadow: 0 2px 5px 1px #00000020;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+
+  h1 {
+    padding: $sp-2 $sp-3;
+    font-size: 17px;
+    border-bottom: 1px solid gray;
+  }
+}
+.about {
+  padding: $sp-3 $sp-4;
+  p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.overview {
+  padding: $sp-3 $sp-4;
+  p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.location {
+  position: relative;
+  height: 250px;
+
+  .image {
+    padding: $sp-4;
+    position: absolute;
+    object-fit: cover;
+  }
+}

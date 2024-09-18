@@ -1,0 +1,210 @@
+@import 'styles/constants.scss';
+
+.container {
+  position: relative;
+}
+.body {
+  margin-top: $sp-3;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.box {
+  position: relative;
+  box-shadow: 0 2px 5px 1px #00000020;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  h1 {
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid gray;
+    font-size: 17px;
+  }
+}
+
+.events {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 18rem;
+  }
+
+  .allEvents {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-3;
+    .event {
+      padding: $sp-2;
+      display: flex;
+      flex-direction: row;
+      gap: $sp-3;
+      border-bottom: 1px solid #d3d3d3;
+
+      .detail {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        gap: 0.2rem;
+
+        .title {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .desc {
+          font-size: 13px;
+          color: slategray;
+        }
+        .date {
+          font-size: 13px;
+        }
+        .posted {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin-top: 0.5rem;
+          font-size: 13px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+.updates {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 500px;
+    min-width: 400px;
+    width: 100%;
+  }
+}
+
+.update {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $sp-3;
+  box-shadow: 0 2px 5px 1px #00000020;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $sp-3;
+
+    .avatar {
+      position: relative;
+      height: 50px;
+      width: 50px;
+    }
+
+    .poster {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      gap: 0.3rem;
+
+      .name {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .time {
+        font-size: 14px;
+        color: gray;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .files {
+    position: relative;
+    height: 300px;
+    .images {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .likeBox {
+    padding: $sp-1;
+    border-bottom: 1px solid #d3d3d3;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    gap: $sp-4;
+
+    .likeIcon {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: blue;
+
+      span {
+        font-size: 13px;
+      }
+      svg {
+        font-size: 15px;
+      }
+    }
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $sp-3;
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      gap: $sp-2;
+
+      .users {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .userName {
+          font-weight: bold;
+          font-size: 14px;
+        }
+        .userComment {
+          font-size: 14px;
+        }
+
+        .likeComments {
+          display: flex;
+          flex-direction: row;
+          gap: $sp-3;
+          align-items: center;
+          color: blue;
+          font-size: 13px;
+
+          :nth-child(1) {
+            cursor: pointer;
+          }
+          :nth-child(2) {
+            cursor: pointer;
+          }
+          :nth-child(3) {
+            cursor: pointer;
+          }
+          :last-child {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}

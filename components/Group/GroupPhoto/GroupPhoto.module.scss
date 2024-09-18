@@ -1,0 +1,34 @@
+@import 'styles/constants.scss';
+
+.container {
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  border-radius: $border-radius;
+  overflow: hidden;
+  height: 100px;
+
+  @media (min-width: $breakpoint-sm) {
+    height: 150px;
+  }
+
+  &:hover img {
+    transition: all ease-in-out 200ms;
+    scale: 1.1;
+  }
+}

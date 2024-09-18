@@ -1,0 +1,439 @@
+@import 'styles/constants.scss';
+
+.profileAll {
+  display: flex;
+  gap: $sp-3;
+}
+
+.container {
+  // max-width: calc($breakpoint-md - 100px);
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.profile {
+  border-radius: $border-radius;
+  background: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  overflow: hidden;
+}
+
+.topFlex {
+  height: 100%;
+  // padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  height: 190px;
+  justify-content: space-between;
+  background: linear-gradient(45deg, seagreen, black);
+  // position: relative;
+}
+
+.top {
+  // flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: last baseline;
+  padding: 0 0.5rem;
+  // margin-top: 3rem;
+
+  @media (min-width: $breakpoint-sm) {
+    text-align: start;
+    padding: 0 1rem;
+    align-items: last baseline;
+  }
+
+  .avatar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .userProfileImage {
+      width: 70px;
+      height: 70px;
+
+      @media (min-width: $breakpoint-sm) {
+        height: 126px;
+        width: 126px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  .text {
+  }
+}
+
+.bio {
+  width: fit-content;
+  // height: 100%;
+  display: flex;
+  // justify-content: last baseline;
+  align-items: last baseline;
+
+  .quote {
+    flex-direction: column;
+    background-color: #d3d3d350;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    padding: 0.3rem;
+  }
+}
+.editProfile {
+  max-width: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.5rem;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 10rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  .edit {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    // padding: 0.4rem 1rem;
+    background-color: #d3d3d370;
+    // color: gray;
+    border-radius: $border-radius;
+    font-size: 10px;
+
+    span {
+      display: none;
+
+      @media (min-width: $breakpoint-sm) {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d3d3d3;
+    }
+
+    svg {
+      font-size: 20px;
+    }
+    @media (min-width: $breakpoint-sm) {
+      font-size: 13px;
+      padding: 0.4rem 1rem;
+      display: inline-block;
+
+      svg {
+        font-size: 15px;
+      }
+    }
+  }
+  .camera {
+    background-color: #d3d3d360;
+    padding: 0.4rem;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.socialProfiles {
+  height: 100%;
+  position: relative;
+  display: flex;
+
+  .socialProfile {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: $sp-2;
+    align-items: center;
+
+    svg {
+      font-size: 30px;
+      padding: 0.3rem;
+      background-color: #d3d3d3;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+      // color: blue;
+    }
+  }
+}
+.detail {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: $sp-2 $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    padding: $sp-2 $sp-3;
+    align-items: last baseline;
+  }
+}
+
+.generalInfo {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  gap: 0.3rem;
+  // margin-top: 1.3rem;
+  font-size: 0.9rem;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-sm) {
+    align-items: flex-start;
+  }
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    svg {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.follower {
+  width: fit-content;
+  background-color: antiquewhite;
+  display: flex;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: $border-radius;
+}
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  svg {
+    // color: #556cd6;
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      color: #556cd6;
+    }
+  }
+}
+
+.bar {
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  box-shadow: 1px 3px 5px 1px #00000020;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: $primary-color;
+  font-size: 14px;
+  gap: $sp-2;
+  margin-top: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 15px;
+    margin-top: $sp-3;
+    gap: $sp-3;
+  }
+  .back {
+    background-color: lightgray;
+    padding: $sp-1;
+    text-align: center;
+  }
+  .normal {
+    padding: $sp-1;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.otherInfo {
+  margin-top: $sp-3;
+}
+
+.otherss {
+  border-radius: $border-radius;
+  flex-direction: column;
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    max-width: 21rem;
+    gap: $sp-3;
+  }
+}
+
+.rightTop {
+  background-color: $primary-color;
+  padding: $sp-3;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+  font-size: 30px;
+  font-weight: bold;
+  height: 300px;
+}
+
+.rightViewers {
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  border-radius: $border-radius;
+
+  h1 {
+    padding: $sp-2 $sp-3;
+    font-size: 17px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.viewers {
+  margin-top: $sp-1;
+  display: flex;
+  flex-direction: column;
+
+  .viewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $sp-3;
+    padding: $sp-1 $sp-3;
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: $sp-3;
+
+      .userInfo {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        :last-child {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+    .connect {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0.6rem;
+      background-color: #d3d3d370;
+      color: seagreen;
+      font-size: 14px;
+      border-radius: 2px;
+      position: relative;
+      gap: 0.1rem;
+
+      svg {
+        font-size: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}
+.seeAll {
+  margin: $sp-3;
+  padding: 0.3rem 0;
+  text-align: center;
+  background-color: #d3d3d370;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+  }
+}
+
+.updateImageBox {
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  z-index: 9999;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 5px 2px #00000020;
+
+  .closeUpdateForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid gray;
+
+    svg {
+      padding: 0.2rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.UpdateCoverBox {
+  max-width: 600px;
+  width: 100%;
+  padding: $sp-2;
+}
+
+.imageSection {
+  height: 250px;
+}
+
+.changeImage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid gray;
+  padding-top: $sp-2;
+
+  button {
+    padding: 0.5rem;
+    background-color: $primary-color;
+    border: 1px solid gray;
+    border-radius: $border-radius;
+  }
+}

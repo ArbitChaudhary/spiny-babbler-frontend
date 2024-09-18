@@ -1,0 +1,19 @@
+@import 'styles/constants.scss';
+
+.title {
+  display: flex;
+  flex-flow: wrap;
+  padding: 1rem;
+
+  .text {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}

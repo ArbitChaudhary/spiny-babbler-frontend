@@ -1,0 +1,373 @@
+@import 'styles/constants.scss';
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: $sp-3;
+}
+.gMiddle {
+  max-width: $breakpoint-md;
+  width: 100%;
+}
+
+.profile {
+  border-radius: $border-radius;
+  background: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+  overflow: hidden;
+}
+
+.topFlex {
+  // padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(45deg, seagreen, black);
+  position: relative;
+  height: 150px;
+
+  @media (min-width: $breakpoint-sm) {
+    height: 200px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: last baseline;
+  margin-left: $sp-3;
+
+  @media (min-width: $breakpoint-sm) {
+    align-items: flex-start;
+    text-align: start;
+    // padding: 0 1rem;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: last baseline;
+    justify-content: last baseline;
+    height: 100%;
+
+    .avatarImage {
+      width: 6rem;
+      height: 6rem;
+      @media (min-width: $breakpoint-sm) {
+        width: 9rem;
+        height: 9rem;
+      }
+    }
+  }
+}
+
+.bio {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: last baseline;
+  align-items: last baseline;
+
+  .quote {
+    flex-direction: column;
+    background-color: #d3d3d350;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    padding: 0.3rem;
+  }
+}
+.editProfile {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $sp-1;
+  .edit {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background-color: $primary-color;
+    font-size: 13px;
+    padding: 0.3rem;
+    // color: gray;
+    border-radius: 100%;
+    @media (min-width: $breakpoint-sm) {
+      padding: 0.4rem 1rem;
+      border-radius: $border-radius;
+    }
+
+    span {
+      display: none;
+      @media (min-width: $breakpoint-sm) {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d3d3d3;
+    }
+
+    svg {
+      font-size: 20px;
+    }
+  }
+  .camera {
+    background-color: #d3d3d360;
+    padding: 0.4rem;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.detail {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: last baseline;
+  padding: $sp-1;
+  // flex-direction: column;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: $sp-3 $sp-2;
+  }
+}
+
+.generalInfo {
+  display: flex;
+  flex: 1;
+  gap: 0.3rem;
+  // margin-top: 1.3rem;
+  font-size: 0.9rem;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-sm) {
+    align-items: flex-start;
+  }
+  .text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    gap: 0.5rem;
+
+    svg {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.joinButton {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  align-items: center;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #d3d3d390;
+  border-radius: $border-radius;
+
+  svg {
+    font-size: 16px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+  }
+}
+
+.bar {
+  overflow: hidden;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin-top: $sp-3;
+  background-color: $primary-color;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  .back {
+    padding: 0.4rem;
+    cursor: pointer;
+    background-color: #d3d3d3;
+  }
+  .normal {
+    padding: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d3d3d370;
+    }
+  }
+}
+
+.aboutGroup {
+  margin-top: $sp-3;
+}
+
+.gRight {
+  max-width: 20rem;
+  width: 100%;
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    display: inline-block;
+    gap: $sp-3;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.box {
+  box-shadow: 0 2px 5px 1px #00000020;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+
+  h1 {
+    font-size: 16px;
+    padding: $sp-2 $sp-3;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.gAdmins {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  padding: $sp-2 $sp-3;
+
+  .gAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .AdminProfile {
+      display: flex;
+      align-items: center;
+      gap: $sp-1;
+
+      .avatar {
+        position: relative;
+      }
+      .adminName {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+    svg {
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.addAdmin {
+  display: flex;
+  flex-direction: row;
+  gap: $sp-1;
+  align-items: center;
+  justify-content: center;
+  background-color: #d3d3d370;
+  padding: 0.4rem;
+
+  svg {
+    font-size: 18px;
+  }
+  span {
+    font-size: 15px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+  }
+}
+
+.createGroup {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-1;
+  padding: 0.4rem;
+  font-size: 15px;
+  // background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: gray;
+  }
+}
+
+.Groups {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+  padding: $sp-2 $sp-3;
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      gap: $sp-1;
+      flex-direction: row;
+      .image {
+        position: relative;
+        height: 60px;
+        width: 60px;
+      }
+      .groupDetail {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        .gName {
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .gMembers {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+    .right {
+      padding: 0.3rem 1rem;
+      background-color: #d3d3d390;
+      font-size: 14px;
+      color: seagreen;
+      height: fit-content;
+      border-radius: $border-radius;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}

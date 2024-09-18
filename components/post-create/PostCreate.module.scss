@@ -1,0 +1,180 @@
+@import 'styles/constants.scss';
+
+.container {
+  // position: relative;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 1px #00000020;
+}
+
+.top {
+  display: flex;
+  padding: 0 1rem;
+
+  .heading {
+    border: none;
+    padding: 0.7rem 0;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: inherit;
+  }
+}
+
+.content {
+  padding: 1rem;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: inherit;
+  }
+}
+
+.bottom {
+  padding: 0.7rem 1rem;
+
+  .optionList {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .option {
+    border: none;
+    border-radius: $border-radius;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: grey;
+    }
+
+    svg {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@keyframes animateBox {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+.showBox {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding-top: 1.5rem;
+  background-color: #00000070;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 100vw;
+  height: fit-content;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+.postCreateBox {
+  max-width: 100vw;
+  width: 100%;
+  background-color: white;
+  animation: animateBox 300ms 1 forwards;
+  height: fit-content;
+  padding: $sp-3;
+  border-radius: $border-radius;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 600px;
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.boxTop {
+  display: flex;
+  flex-direction: row;
+  gap: $sp-3;
+  align-items: center;
+  margin-top: 2rem;
+  padding: $sp-3 0;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+
+  .avatar {
+    position: relative;
+    height: 60px;
+    width: 60px;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+.postOther {
+  width: 100%;
+  margin-top: $sp-3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $sp-3 $sp-3;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d3d3d3;
+
+  .postContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+    background-color: #d3d3d370;
+    padding: 0.3rem;
+    border-radius: $border-radius;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.postButton {
+  width: 100%;
+  margin-top: $sp-3;
+  padding: 0.5rem;
+  border: none;
+  border-radius: $border-radius;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #76767650;
+  }
+}

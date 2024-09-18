@@ -1,0 +1,77 @@
+@import '../../styles/constants.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-sm) {
+    // max-width: $breakpoint-sm;
+  }
+}
+
+.experiences {
+  position: relative;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  padding: $sp-1;
+  // box-shadow: 0 2px 5px 1px #00000020;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 2px;
+  }
+
+  h1 {
+    font-size: 16px;
+    padding: $sp-2;
+    border-bottom: 1px solid gray;
+    line-height: 1;
+
+    @media (min-width: $breakpoint-sm) {
+      padding: $sp-2;
+      border-bottom: 1px solid gray;
+    }
+
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      color: gray;
+    }
+  }
+  .AddExperienceForm {
+    display: flex;
+    flex-direction: column;
+    // margin-top: $sp-1;
+    padding: $sp-2;
+    gap: $sp-2;
+
+    @media (min-width: $breakpoint-sm) {
+      padding: $sp-3;
+      gap: $sp-4;
+    }
+
+    .formInputs {
+      display: flex;
+      flex-direction: column;
+      gap: $sp-2;
+
+      @media (min-width: $breakpoint-sm) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $sp-3;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: $sp-1;
+      }
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

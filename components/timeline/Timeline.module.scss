@@ -1,0 +1,389 @@
+@import '../../styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-md;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+
+  @media (min-width: $breakpoint-md) {
+    justify-content: center;
+    gap: $sp-3;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.left {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 18rem;
+  }
+}
+
+.bio {
+  width: 100%;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  h1 {
+    padding: $sp-2 $sp-3;
+    font-size: 17px;
+    // padding-bottom: 0.2rem;
+    border-bottom: 1px solid gray;
+  }
+
+  form {
+    padding: $sp-2 $sp-3;
+    display: flex;
+    flex-direction: column;
+    gap: $sp-3;
+    margin-top: 1rem;
+
+    input {
+      padding: $sp-3;
+      border: 1px solid lightgray;
+      border-radius: $border-radius;
+
+      &:focus {
+        outline: 1px solid gray;
+      }
+    }
+
+    button {
+      padding: 0.5rem;
+      border-radius: $border-radius;
+      text-align: center;
+      border: none;
+      background-color: #d3d3d370;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}
+
+.photos {
+  width: 100%;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 1px #00000020;
+
+  h1 {
+    padding: $sp-2 $sp-3;
+    font-size: 17px;
+    // padding-bottom: 0.2rem;
+    border-bottom: 1px solid gray;
+  }
+
+  .Photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    padding: $sp-2;
+
+    .photo {
+      position: relative;
+      height: 5rem;
+    }
+  }
+}
+.right {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+  max-width: 500px;
+  width: 100%;
+  .top {
+    width: 100%;
+    max-width: 500px;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 5px 1px #00000020;
+
+    h1 {
+      padding: $sp-3;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: $sp-1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .inputs {
+        display: flex;
+        flex-direction: row;
+        gap: $sp-1;
+        padding: $sp-3;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+
+        input {
+          width: 100%;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .buttons {
+        padding: $sp-3;
+        display: flex;
+        flex-direction: row;
+        gap: $sp-3;
+
+        button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.3rem;
+          padding: 0.4rem $sp-1;
+          border: none;
+          background-color: lightgray;
+          border-radius: $border-radius;
+
+          &:hover {
+            cursor: pointer;
+            background-color: lightslategray;
+          }
+
+          svg {
+            font-size: 20px;
+            color: #090988;
+          }
+        }
+      }
+    }
+  }
+}
+
+.posts {
+  .updates {
+    max-width: 500px;
+
+    width: 100%;
+
+    @media (min-width: $breakpoint-sm) {
+      min-width: 400px;
+    }
+  }
+
+  .update {
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    padding: $sp-3;
+    box-shadow: 0 2px 5px 1px #00000020;
+    display: flex;
+    flex-direction: column;
+    gap: $sp-3;
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $sp-3;
+
+      .avatar {
+        position: relative;
+        height: 50px;
+        width: 50px;
+      }
+
+      .poster {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        gap: 0.3rem;
+
+        .name {
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .time {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+
+    .desc {
+      font-size: 14px;
+    }
+
+    .files {
+      position: relative;
+      height: 300px;
+      .images {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .likeBox {
+      padding: $sp-1;
+      border-bottom: 1px solid #d3d3d3;
+      border-radius: $border-radius;
+      display: flex;
+      align-items: center;
+      gap: $sp-3;
+
+      .likeIcon {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        span {
+          font-size: 14px;
+        }
+        svg {
+          color: blue;
+          font-size: 15px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .commentIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.3rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          font-style: 14px;
+        }
+        svg {
+          font-size: 15px;
+        }
+      }
+    }
+    .comments {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: $sp-3;
+      .comment {
+        display: flex;
+        align-items: flex-start;
+        gap: $sp-2;
+
+        .users {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          .userName {
+            font-weight: bold;
+            font-size: 14px;
+          }
+          .userComment {
+            font-size: 14px;
+          }
+
+          .likeComments {
+            display: flex;
+            flex-direction: row;
+            gap: $sp-3;
+            align-items: center;
+            color: blue;
+            font-size: 13px;
+
+            :nth-child(1) {
+              cursor: pointer;
+            }
+            :nth-child(2) {
+              cursor: pointer;
+            }
+            :nth-child(3) {
+              cursor: pointer;
+            }
+            :last-child {
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.commentForm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: $sp-2;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #808080;
+  border-radius: $border-radius;
+  padding: 0 $sp-2;
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: $sp-2;
+
+    svg {
+      font-size: 16px;
+
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.postForm {
+  max-width: 500px;
+  width: 100%;
+
+  .postFormTop {
+    display: flex;
+    flex-direction: row;
+    gap: $sp-2;
+    align-items: center;
+
+    .postAvatar {
+      height: 5rem;
+      width: 5rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

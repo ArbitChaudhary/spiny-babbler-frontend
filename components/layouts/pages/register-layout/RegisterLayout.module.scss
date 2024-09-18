@@ -1,0 +1,10 @@
+@import 'styles/constants.scss';
+
+.container {
+  max-width: $breakpoint-sm;
+  margin: 5rem auto;
+  padding: 1rem;
+  background-color: $primary-color;
+  box-shadow: 0 0 5px 1px #00000020;
+  border-radius: $border-radius;
+}

@@ -1,0 +1,30 @@
+@import 'styles/constants.scss';
+
+.experience {
+  border-radius: $border-radius;
+  background-color: antiquewhite;
+  padding: 1rem;
+
+  .top {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .time {
+      color: grey;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,39 @@
+@import 'styles/constants.scss';
+
+.notification {
+  padding: 1rem;
+  display: flex;
+  gap: 0.7rem;
+
+  .image {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  .detail {
+    flex: 1;
+    font-size: .9rem;
+  }
+
+  .others {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .time {
+    font-size: .7rem;
+    color: grey;
+  }
+
+  .moreOptions {
+    cursor: pointer;
+    svg {
+      font-size: 1.2rem;
+    }
+  }
+}
